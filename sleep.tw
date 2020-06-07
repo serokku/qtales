@@ -1,0 +1,38 @@
+:: sleep [bedroom]
+	<<set_time_increment 0 0>>\
+	<<add_time 8 0 true>>\
+	<<add "hunger" 40>>\
+	<<add "mood" 10>>\
+	<<set $cur_energy to $max_energy>>\
+	\
+	@@.Narrator;You lay down in bed, enjoying the soft embrace of your covers, you turn off the lights and wait for sleep to come,\
+	<<if $cur_energy/$max_energy > 0.4>>it takes a while, but soon you are in the land of dreams.\
+	<<else>>\
+	you are so tired you fall asleep almost instantly.\
+	<<endif>>@@\
+	<<if $cur_lust/$max_lust > 0.8>>\
+
+
+	@@.Narrator;The arousal that afflicted you before going to sleep was so great that your dreams are contaminated by it, showing you perverted images and situations that almost make sense.@@
+
+	<<include lust_dreams>>\
+	<<add "lust" 10>>\
+	<<else>>\
+	@@.Narrator;Dreams are mostly weird, and tonight was no exception.@@
+
+	<<include dreams>>\
+	<<endif>>\
+
+	
+	[[Wake Up|bedroom]]
+
+:: dreams [bedroom]
+	TODO: MAKE SOME DREAMS
+
+:: lust_dreams [bedroom]
+	TODO: MAKE MORE DREAMS
+	<<image "images/dreams/lewd/0.webm">>
+
+	@@.Narrator; In your dream you go to work, but unfortunately you forgot to wear panties, and considering you are wearing a short dress it makes your pussy very accessible.
+
+	During one of the breaks you decide to indulge in a bit of exibitionism, but not a whole lot.@@

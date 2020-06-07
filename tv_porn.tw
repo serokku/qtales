@@ -1,0 +1,156 @@
+:: tv_porn [livingroom]
+	<<set $tv_content to "porn">>\
+	<<add "lust" 5>>\
+	<<image "images/tv/porn/porn.webm">>
+	@@.Narrator;\
+	The Tv is currently showing the daily programming of PornTV, one of the porn channels mysteriously available to you right now (Even though you didn't pay for it).@@
+
+	@@.Narrator;\
+	You can change the channel to:@@
+	[[Toon Network|tv_toons]]
+	[[NNN News|tv_news]]
+
+	<<event_available $drone_intro == 0>>[[Sit down and watch porn|tv_porn_watch]]
+	[[Turn the TV off|tv_off]]
+	[[Turn your attention away from the TV|living_room]]
+
+:: tv_porn_watch [livingroom]
+	<<set_time_increment 0 0>>\
+	<<if visited() == 1 && $tv_porn_channel_find_done == false>><<goto tv_porn_channel_find_1>><<else>>\
+	<<add_time 1 0>>\
+	<<add "mood" 30>>\
+	<<add "lust" 30>>\
+	<<endif>>\
+	<<show_random_image "porn_imgs">>
+	
+	<<if $cur_lust < 40>>\
+	@@.Narrator;\You spend the next hour on your sofa, watching some porn on the TV, the sounds of moaning and the slapping of bodies filling your living room.@@
+
+	[[Get up|living_room]]
+	<<elseif $cur_lust < 75>>\
+	@@.Narrator;\You spend the next hour on your sofa, softly massaging your pussy while watching deprativities happen in front of you on your TV.@@
+
+	<<show_random_image "tv_porn_mastr_0">>
+
+	[[Get up|living_room]]
+	<<elseif $cur_lust < 95>>\
+	@@.Narrator;Your lust gets control over you, and you cant think about anything other than cumming right NOW.
+
+	You ditch your damp panties and quickly get to work on your dripping pussy while watching the debauchery on screen.@@
+
+	<<show_random_image "tv_porn_mastr_1">>
+
+	<<else>>\
+		<<if $drone_intro == 0>>\
+		<<goto drone_intro>>\
+		<<endif>>\
+	<<sub "lust" $max_lust>>\
+	@@.Narrator;You can't hold it anymore, and your orgasm builds up until you finally cum violently.@@
+
+	<<show_random_image "tv_porn_mastr_2">>
+
+	[[Get up|tv_porn_watch]]
+	<<endif>>\
+	<<event_available $drone_intro == 0>>[[Keep watching|tv_porn_watch]]
+
+:: tv_porn_channel_find [livingroom]
+	<<add "lust" 30>>\
+	<<add_time 0 15>>\
+	@@.Narrator;\
+	While watching tv you accidentally click on the remote and you change the channel to a random one, while navigating back to what you were watching you are surprised to see that all the sports channels are unlocked.
+
+	Wondering if the same is true for the expensive porn cable channels you go check them out, and to your surprise, it is.
+
+	<<image "images/tv/porn/cuckquean_event/find.webm">>
+	<<set $tv_porn_enabled to true>>\
+
+	You make a mental note and go\
+	<<if $cur_lust < 60>>\
+		<<return " back ">>\
+	<<else>>\
+		<<gradual_trigger "back" "tv_porn_channel_find_0" 0 true>>\
+	<<endif>>\ 
+	to what you were watching.@@
+
+	<<gradual_include 0>>
+
+:: tv_porn_channel_find_0 [livingroom]
+	<<set_time_increment 0 0>>\
+	<<add "lust" 20>>\
+	<<add_time 15>>\
+	@@.Narrator;Well, you could go back to whatever it was you were watching... Or you can [[stay here|tv_porn_channel_find_1]] and take a look at the current programming right? You never know if it's going to be unlocked forever.@@
+
+	<<gradual_end>>
+
+:: tv_porn_channel_find_1 [livingroom]
+	<<add "lust" 40>>\
+	<<add_time 30>>\
+	@@.Narrator;You switch around the porn channels until you find something that you find interesting.@@
+
+	<<image "images/tv/porn/cuckquean_event/find_0.webm">>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerThink;OOOooooooooh boy, this is hot.@@
+
+	@@.Narrator;You catch the movie just as it's starting, it begins with the boyfriend and girlfriend fooling around, the friend then shows up uninvited, and catches both of them in the act, she doesn't say nothing at first, and just watches quietly while hidden.@@	
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerThink; ... @@
+
+	@@.NPC0;Girlfriend:@@
+	@@.NPC0Speak;Oh.. Ah fuck harder... Hiiii there Chloeee ... Fuckkk .... Enjoy... ah ... ing the show?@@
+
+	@@.Narrator;Clearly Chloe was enjoying the show very much, seeing as her hands were down her pants, rubbing her clit, while she watched her friend get railed.
+
+	Chloe's hands weren't the only ones snaking inside her pants tho, and you quickly felt how wet you were by watching this.@@
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerThink; .. Shit, I'm [[dripping|pussy_dripping]] ... @@
+	
+	@@.NPC0;Girlfriend:@@
+	@@.NPC0Speak;... Why dont ... you get ... FUCK .. closer babe?@@
+
+	@@.Narrator;Chloe gets closer to the couple, and intently watches them fuck, while rubbing her pussy.@@
+
+	<<image "images/tv/porn/cuckquean_event/find_1.webm">>
+
+	@@.Narrator;Chloe gets closer to the couple, and intently watches them fuck, while rubbing her pussy.@@
+
+	[[Masturbate while watching|tv_porn_channel_find_2]]
+
+:: tv_porn_channel_find_2
+	<<add "lust" 40>>\
+	<<add_time 30>>\
+	<<image "images/tv/porn/cuckquean_event/mastr.webm">>
+
+	@@.Narrator;You take off your pants and panties, since they were only on the way, you masturbate furiously to the situation happening on the TV, your pussy is so wet that soon the only sounds on the living room are the moaning of both girls being fucked on-screen and the wet sounds coming out of your cunt.@@
+
+	@@.NPC1;Boyfriend (On-screen)@@
+	@@.NPC1Speak;... Fuck I'm gonna cum ...@@
+
+	<<image "images/tv/porn/cuckquean_event/find_2.webm">>
+	
+	@@.Narrator;Soon the man on screen starts to reach his limit, and proceeds to unload inside one of his girlfriend, while Chloe (and you) watches.@@
+
+	[[You feel your own orgasm building|tv_porn_channel_find_3]]
+
+:: tv_porn_channel_find_3 [livingroom]
+	<<sub "lust" $max_lust>>\
+	<<set $tv_porn_channel_find_done = true>>
+	<<add_time 30>>\
+	@@.Narrator;The man cumming didn't bring you over the edge, but you kept rubbing your pussy furiously.
+
+	The scene that did you in was right after he came.@@
+
+	<<image "images/tv/porn/cuckquean_event/find_3.gif">>
+
+	@@.Narrator;Chloe got under her friend and started licking the cum right out of her friends pussy, you fantasized about doing the same, and the thoughts of licking cum right off of Phoebe's dripping cunt brought you over the edge, making you cum vigorously.@@
+
+	<<image "images/tv/porn/cuckquean_event/cum.webm">>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerThink; ...... Ahhhh FUCK .............. fuck that was good. @@
+
+	@@.Narrator;You stayed there for a while, basking in the afterglow.@@
+
+	[[Recompose yourself, and go on with your day|tv_porn]]

@@ -1,0 +1,100 @@
+:: tv_news [livingroom]
+	<<set $tv_content to "news">>\
+	<div align="center">[img[images/tv/news.webp]]</div>
+	@@.Narrator;\
+	The Tv is currently showing the NNN Daily News report, presented by Anna Bloume and Kevin Hardikk, it's not a bad newscast, so when I end up watching it sometimes, since NNN is one of the only news channels available in my cable package.@@
+
+	<<first>>\
+	@@.AnnaBloume;ANNA BLOUME:@@
+	@@.AnnaBloumeSpeak;..... the advance of FLACCID-69 has been devastating for the middle to late age male population, the recently instituted quarantine measures are seemingly working to keep the spread to a mininum, but some experts question the need to quarantine every non-essential citizen, we go live to Dr. Hyuge D., expert in sexual health.
+
+	Doctor, I am sure the viewers are tired of listening to the effects of the virus, but can you give us a quick overview of what is currently going on?@@
+
+	@@.DrD;HYUGE D (live):@@
+	@@.DrDSpeak;Of course Anna, as we are all know, the virus affects the male population, but it has a light bias towards the older than 45 age-range, younger men CAN still catch it. 
+
+	The effects of the virus are devastating, erections become impossible and fertilty drops to close to zero.
+
+	Quarantine measures are being adopted, to slow down the spread of the virus while we look for a cure, we cant allow the virus to affect 100% of the male population, for that would possibly end human civilization.
+
+	The virus is airborne and has been spreading for a while, some expert friends of mine recently released a paper describing how fast it is spreading, and the results make me very optimistic, with quarantine measures, it would take a few years to affect 100% of the male population.@@
+
+	@@.AnnaBloume;ANNA BLOUME:@@
+	@@.AnnaBloumeSpeak; A few YEARS of quarantine!? You can't really be optimistic about that doctor!@@
+
+	@@.DrD;HYUGE D (live):@@
+	@@.DrDSpeak; No no no Anna! That is not what I said! The farmaceutical companies expect a vaccine to be ready later this year, that is what makes me optimistic, the vaccines will be ready BEFORE we get to a point where maintaining humanity is impossible.@@
+
+	@@.AnnaBloume;ANNA BLOUME:@@
+	@@.AnnaBloumeSpeak; Ahhhh... I see, thank you very much for your parti.....@@
+
+	@@.Player;<<player_name>> (Thinking):@@
+	@@.PlayerThink; So a few months of quarantine, that's not that bad.@@
+
+	<</first>>\
+	@@.Narrator;\
+	You can change the channel to:@@
+	[[Toon Network|tv_toons]]
+	<<if $tv_porn_enabled>>[[PornTV|tv_porn]]
+	<<endif>>\
+
+	[[Turn off the TV|tv_off]]
+
+	[[Turn your attention away from the TV|living_room]]
+
+:: tv_toons [livingroom]
+	<<set $tv_content to "toons">>\
+	<<image "images/tv/toon.gif">>
+	@@.Narrator;\
+	The Tv is currently showing the daily programming of the Toon Network channel, which in this case right now is an episode of Daffy Duck, your favorite.@@
+
+	@@.Narrator;\
+	You can change the channel to:@@
+	[[NNN News|tv_news]]
+	<<if $tv_porn_enabled>>[[PornTV|tv_porn]]
+	<<endif>>\
+
+	<<event_available !$tv_porn_enabled>>[[Sit down and enjoy some cartoons|tv_toons_watch]]
+	[[Turn the TV off|tv_off]]
+	[[Turn your attention away from the TV|living_room]]
+
+:: tv_toons_watch [livingroom]
+	<<if random(1, 100) < $tv_porn_channel_find_chance && $tv_porn_enabled == false>>
+		<<goto tv_porn_channel_find>>
+	<<endif>>
+
+	<<show_random_image "toon_imgs">>
+	@@.Narrator;\
+	You sit down on the couch and watch some old classic cartoons.@@
+	<<set_time_increment 0 0>>\
+	<<add_time 1 0>>\
+	<<add "mood" 30>>\
+	
+	<<event_available !$tv_porn_enabled>><<link "Keep Watching" tv_toons_watch>>\
+	<</link>>\
+
+	<<link "Stop" living_room>>\
+	<</link>>\
+
+:: tv_off [livingroom]
+	<<set $tv_on to false>>\
+	<div align="center">[img[images/tv/off.jpg]]</div>\
+
+	@@.Narrator;\
+	The TV is currently turned off. Showing the best possible quality image of nothing.@@
+
+	[[Turn the TV on|tv_on]]
+
+	[[Turn your attention away from the TV|living_room]]
+
+:: tv_on
+	<<set $tv_on to true>>\
+	<<switch $tv_content>>\
+		<<case "news">>\
+			<<goto tv_news>>\
+		<<case "toons">>\
+			<<goto tv_toons>>\
+		<<case "porn">>\
+			<<goto tv_porn>>\
+	<</switch>>\ 
+

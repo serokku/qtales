@@ -1,0 +1,5 @@
+:: quest_log
+	<h1>Quest Log</h1>
+	<<print_questlog>>
+
+	<<return "Go Back">>

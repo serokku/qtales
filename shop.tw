@@ -1,0 +1,4 @@
+:: groceries_buy [computer]
+	<<set $cur_supplies += 10>>\
+	<<sub "money" $groceries_price>>\
+	<<goto computer_shop>>\

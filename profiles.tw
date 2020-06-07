@@ -1,0 +1,38 @@
+::player_profile [computer]
+	<div align="center"><img src="images/characters/player/profile/start_profile.jpg" width="100%"></div>\
+	@@.PlayerSpeak;\
+
+	Hey there, I am $player_name, 18yo college student. hmu xoxo@@
+
+	<<first>>\
+	@@.Player;<<player_name>> (Thinking):@@
+	@@.PlayerThink; Good fucking god, hmu, who says that nowadays, and I need to change that picture, I dont look that different, but that thing is 4 years old now.
+
+	I took this picture right after I met $boyfriend_name.
+
+	Oh hey, look, they added a way to see older photos...
+	...
+	OH GOD they added a way to see older photos, FUCK!@@
+
+	[[Check old photos|profile_player_old]]
+	<<finally>>\
+	[[Go back|computer_profiles]]
+	<</first>>\
+
+::profile_player_old [computer]
+	<div align="center"><img src="images/characters/player/profile/old_photo1.jpg" width="100%"></div>\
+	@@.PlayerSpeak;\
+
+	RAWR XD, OwO Hewwooo how is everyone todaaaay???? I am $player_name, send me a pm so we can tallllk, my favorite bands are My Physical Romance and Panic? At The Club, HMUUUUuUUuuUuuu@@
+
+	@@.Player;<<player_name>> (Thinking):@@\
+	@@.PlayerThink;
+	Jesus fucking H Christ, this is worse than finding porn of myself online.@@\
+
+	<<linkreplace "Delete old profile">>\
+	@@.PlayerThink; Thank god, that's not online anymore.
+
+	My hair did look great tho...@@\
+
+	[[Go back|player_profile]]
+	<</linkreplace>>\
