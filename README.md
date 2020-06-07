@@ -1,0 +1,2 @@
+# qtales
+Quarantine Tales Game
