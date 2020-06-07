@@ -1,0 +1,23 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"file_exclude_patterns": ["*.d"]
+		}
+	],
+	"build_systems":
+	[
+		{
+			"name": "make",
+			"shell_cmd": "make",
+			"variants" :
+			[
+				{
+				"name": "Run",
+				"shell_cmd": "make run"
+				}
+			]
+		}
+	]
+}
