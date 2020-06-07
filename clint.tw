@@ -1,0 +1,197 @@
+:: clint_profile [computer]
+	<div align="center"><img src="images/characters/clint/profile.jpg" width="100%"></div>\
+	<div align="center"><img src="images/characters/clint/skull.webp" width="30px"></div>
+	@@.ClintSpeak;<center>WELCOME MORTALS, TO THE STARKILLER (aka Clint) REALM
+	BE CAREFUL, BECAUSE ONCE YOU COME IN, YOU MIGHT NEVER LEAVE</center>@@
+	<div align="center"><img src="images/characters/clint/skull.webp" width="30px"></div>\
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerThink;Clint is.... A bit weird, but he's a cool guy I swear.@@
+
+	[[Go back|computer_profiles]]
+
+:: clint_message
+	<<if $job_search is 1>>\
+	<<include clint_job_search_1>>\
+	<<elseif $job_search is 2 && $cur_day > $job_search_day>>\
+	<<include clint_job_search_2>>\
+	<<elseif $drone_intro is 1>>\
+	<<include clint_drone>>\
+	<<else>>\
+	<<include clint_talk_default>>
+	<<endif>>
+
+:: clint_talk_default
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Yo Clint.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Sup $player_name.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Not much, you?@@
+
+	@@.Narrator;You and Clint spend the next half an hour talking about some random crap.@@
+
+	[[Go back to Talking|computer_talkings]]
+
+:: clint_job_search_1
+	<<set $job_search to 2>>\
+	<<set $job_search_day to $cur_day>>\
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Hey Clint.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;WHO DARES TO CONTACT ME IN AN UNSECURED MESSAGING PLATFORM.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Fuck off Clint, you know it's me, my name is literally on top of my message.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Fuck $player_name, come-on that was a bit funny right?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Hilarious.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Alright alright i'll drop the act, wassup $player_name?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Well, not much, the world might end, and I got fired, yknow, just a $week_day afternoon.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Ah, shit, sorry about that, want me to fuck up your boss's internet forever?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;You can do that?@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Might@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Hmmm, would rather find some nasty secrets from him, and I KNOW you can do that, but thats not really what I came here to do.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Hehe, yeah, that I can do, lot more fun too, I like the way you think $player_name, but whats the dealio?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Well I kind of need a new job, and I am stuck at home, do you know any way to make money online, like a job platform or something?@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Hmmmmm, good thing you came to me instead of doing a Woozle search, there are tons of scam MAKE MONEY ONLINE GUARANTEED sites around, but you are safe with me, but if you want my help I want something from you.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Fuck off Clint, I wont send you my used panties or anything you little perv.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;GAHAHAHAH You know me well $player_name, but that's not even close to what I want.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Spill it@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Uhmm, well can you get me Phoebes contact?@@</div>
+	<<set $phoebe_clint_talk to 1>>\
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;YOU HAVE A CRUSH ON PHOEBE??????@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Fuck maybe alright.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Hehe, dont worry, your secret is safe with me, but weren't you the BEST HACKER THAT EVER LIVED, couldn't you get her contact some other way?@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;HEY never said I COULDN'T get her contact, but I AM A GENTLEMAN, I think it would be a TREMENDOUS invasion of privacy if I found out her contact through illegitimate means.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Oh what do we have here, actual decency from a degenerate.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;I might be a degenerate but I'm not a cunt.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Hell yeah Clint, sure, here it is Talkings::PhoebeKitty97, I'll even put in a good word for you.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Thanks $player_name, also, you know I would've helped you anyway right?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Yeah, but I was curious to see what you wanted.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Great, I'll compile some information about some possible online job leads and send to you tomorrow, alright?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;You're the best babe <3@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;I'm aware, see ya $player_name@@</div>
+
+	<<set_quest_stage 1 1>>
+
+	[[Go back to Talking|computer_talkings]]
+
+:: clint_job_search_2
+	<<set $job_search_complete to true>>\
+	<<set $job_enabled to true>>\
+	<<set $job_survey to true>>\
+	<<set $amazing_courses_plusplus to true>>\
+	<<set $job_search to 3>>\
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;So Clint, got the job listings I asked you?.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Hey $player_name, INDEED I DID. 
+
+	The absolute easiest thing you can do is filling online advertising surveys, but it also pays the least, I got some trusted non-scammy sites and I'm sending them to your computer. 
+
+	You need to work on you computery skill-set so you can do some more complex thing (That also pay better), so I'm sending some online courses your way on a bunch of things, once you do a few of them, come talk to me and I'll get you some new opportunities.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Neat! I'll take a look.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Uhm, did you talk to Phoebe?@@</div>
+
+  	<<if $phoebe_clint_talk is 2>>\
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Not yet, but I will, I promise.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Alright, I'm gonna send her a message, and try to talk a bit, I'm just a bit nervous.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;She's a fun girl, has absolutely zero clue about this whole computer thing, but I'm sure you can find something you both enjoy.@@
+	<<else>>\
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;I have! Go talk to her you idiot, she's a fun girl, has absolutely zero clue about this whole computer thing, but I'm sure you can find something you both enjoy.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Alright, I will.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Awesome@@
+	<<endif>>\
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Good luck with the job $player_name, I'm sure you'll do great, if you manage to fuck signing surveys up, I'm really going to be amazed.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Fuck off Clint.
+
+	Imma head out, see ya broski.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Nobody says that anymore fratboi.
+
+	See ya.@@</div>
+
+	@@.Narrator;Right after you log-off, clint sends you a bunch of files, and says run this.
+
+	You oblige and suddenly more options magically appear on your computer.@@
+
+	<<set_quest_stage 1 2>>
+
+	[[Go back to Talking|computer_talkings]]

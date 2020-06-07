@@ -1,0 +1,32 @@
+:: drone_intro
+	@@.Narrator;Your lust keeps increasing, you are on your sofa, furiously masturbating, the sounds of moaning fill the room, both from the screen and yours.
+
+	But you also hear a small buzzing sound, that seems to be coming from your balcony.
+
+	You turn your attention there and you notice that there is a drone on your balcony!@@
+
+	<<image "images/drone/balcony.jpg">>
+
+	[[Wtf!?|drone_intro_1]]
+
+:: drone_intro_1
+	@@.Narrator;As soon as the drone notices your noticing of it, it immediately flies away.
+
+	You quickly cover yourself and go to your balcony, there you can see the drone flying around, going back to it's home.@@
+
+	<<image "images/drone/flyaway.webm">>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerThink;Dude, WHAT THE ACTUAL FUCK, was that drone SPYING ON ME???
+
+	I need to talk to Clint about this, he knows how to deal with this kind of shit.@@
+
+	<<set $drone_intro to 1>>\
+	<<add_quest 3>>
+	[[Calm down and get on with your day.|balcony]]
+
+:: drone_buy
+	<<set $drone_intro = 3>>\
+	<<sub "money" 200>>\
+	<<set_quest_stage 2 2>>
+	<<goto computer_shop>>\

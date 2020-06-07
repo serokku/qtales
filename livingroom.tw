@@ -1,0 +1,28 @@
+:: living_room [livingroom]
+	<<set_time_increment 5>>\
+	<<if $is_night>><div align="center">[img[images/locations/livingroom_night.jpg]]</div>\<<else>><div align="center">[img[images/locations/livingroom.jpg]]</div>\<<endif>>
+	@@.Narrator;This is your living room.
+
+	Your biggest buy of the last months is here, a Zony 55-inch OLED Extremely Bonkers 4K HDR AWESOME-EDITION(tm) TV, which you mostly use to watch Daffy Duck and old cartoon network shows. But they do look crispy AF.
+
+	The space in the living-room divides into a [[kitchen|kitchen]], with the only separation being a counter.
+
+	A glass window/door separates the living-room from the <<if $intro is true>>balcony<<else>>[[balcony|balcony]]<<endif>>.
+
+	Also there is a small hallway connecting the living-room to the other rooms of the apartment, namely, a <<if $intro is true>>bedroom<<else>>[[bedroom|bedroom]]<<endif>>, and a <<if $intro is true>>bathroom<<else>>[[bathroom|bathroom]]<<endif>>.
+
+	<<if $tv_on is false>>\ 
+	The TV is currently turned [[off|tv_off]], displaying an incredible 4k resolution image of absolutely jack shit.
+	<<else>>\
+	The TV is currently turned on,\
+		<<switch $tv_content>>\
+			<<case "news">>\
+				\ showing the <<if $intro is false>>[[newscast|tv_news]]<<else>>newscast<<endif>>.
+			<<case "toons">>\
+				\ showing some [[cartoons|tv_toons]].
+			<<case "porn">>\
+				\ blasting [[porn|tv_porn]] to the whole living room, filling it with sounds of moaning and cumming.\
+				<<add "lust" 5>>\
+		<</switch>>\ 
+	<<endif>>\
+	@@

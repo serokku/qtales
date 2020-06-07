@@ -1,0 +1,50 @@
+:: kitchen [kitchen]
+	<<set_time_increment 5>>\
+	<<if $is_night>><div align="center">[img[images/locations/kitchen_night.jpg]]</div>\<<else>><div align="center">[img[images/locations/kitchen.jpg]]</div>\<<endif>>
+	<<if $intro_kitchen_objective>>\
+	<<goto intro_kitchen>>\
+	<</if>>\
+	@@.Narrator;You are you standing in your kitchen, it is decently equipped, with a softly humming refrigerator, a microwave, a stove, sink, and everything  else you expect from a normal kitchen.
+
+	<<if $cur_supplies > 0>>\
+	Opening the fridge reveals about <<print $cur_supplies>> possible servings of food, you \
+		<<if $cur_hunger/$max_hunger > 0.2 >>can [[make something to eat|eat]].\
+		<<else>>could make something to eat, but you are not really hungry right now.\
+		<<endif>>\
+	<<else>>\
+	Opening the fridge reveals it to be empty, you need to get some supplies, you can buy it on the internet and have it delivered to you or carefully go outside to the little grocery store nearby and buy it there.
+	<<endif>>
+
+	Beyond the counter you can see your [[Living Room|living_room]]@@
+
+:: intro_kitchen [kitchen]
+	<div align="center">[img[images/intro/fridge.jpg]]</div>\
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Hmmm, it's not that bad.@@
+
+	@@.PlayerThink;With the stuff I have in the pantry, I should have enough food for a few days.@@
+
+	@@.PlayerThink;Well, even in quarantine I need to eat, grocery stores are considered essential so I could go there and buy some crap.@@
+
+	@@.PlayerThink;Probably could buy it online and have it delivered.@@
+
+	@@.PlayerThink;That is a problem for future me.@@
+
+	<<set $intro_kitchen_objective to false>>\
+	<<set_quest_stage 0 1>>
+
+	[[Close Refrigerator |end_intro]]
+
+:: end_intro [kitchen]
+	@@.Narrator; And so begins your quarantine. You are now free to take your own decisions and guide this hot piece of ass during these trying times.
+
+	Remember to always eat and sleep, your character has needs, and if they arent fulfilled you might find yourself in a DREADED GAME OVER situation.
+
+	Also, you might see <<event_available true>> in some places, it indicates if there are events that you haven't seen in some repeatable action.
+
+	Which is not good for anyone involved.@@
+
+	<<set $intro to false>>\
+	[[Free yourself from the guided introduction sequence |kitchen]]
+
+

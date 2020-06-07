@@ -1,0 +1,81 @@
+:: job_survey [computer]
+	<<set _porn_event to false>>\
+	<<if visited() > $job_survey_porn_event_trigger and $job_survey_porn is false>>\
+		<<if random(1, 100) < $job_survey_porn_event_chance>>\
+			<<set _porn_event to true>>\
+		<<endif>>\
+	<<endif>>\
+	<<if _porn_event is true>>\
+		<<include job_survey_porn_find_ev>>\
+	<<else>>\
+		<<include job_survey_default>>\
+	<<endif>>\
+
+:: job_survey_default [computer]
+	@@.Narrator;You spend the next hour or so, filling up online advertisement surveys and get paid a measly 2 dollars.@@
+
+	<<first>>\
+	@@.Player;<<player_name>>:@@
+	@@.PlayerThink;This fucking blows, but it's my only option right now.@@
+
+	<<set_quest_stage 1 3>>
+
+	<</first>>\
+	<<set_time_increment 0>>\
+	<<add_time 1 0>>\
+	<<add "energy" -1>>\
+	<<add "mood" -10>>\
+	<<add "lust" -5>>\
+	<<add "money" 2 + random(0, 2)>>\
+	[[Go back to the job list|computer_jobs]]
+
+:: job_survey_porn_find_ev [computer]
+	@@.Narrator;While grinding away at online survey after online survey to get some measly payout, an ad pops up, promissing a bit higher payout, you would usually dismiss this as a scam, but the ad is from the same company that hosts the service you are providing, so you fall on the bait and take a look.
+
+	Without leaving the site, some new options appear on the survey dashboard, titled Porn categorization project, apparently some wealthy pervert has a bank of millions of porn images and clips, and wants it meticulously categorized, so he approached the right people and got this system online, the payout is slightly better, considering the unwillingness of certain people to work on porn.@@
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerThink;Hmmmmm, slightly better payout you say... I was never really a porn watcher, but a slightly better payout is a slightly better payout.@@
+
+	<<linkreplace "Sign Up and add to Clint's software.">>\
+	<<set $job_survey_porn to true>>\
+	<<goto job_survey_porn>>\
+	<</linkreplace>>\
+
+:: job_survey_porn [computer]
+	<<set $phoebe_survey_porn_talk to true>>\
+	<<first>>\
+	@@.Narrator;The website for the Porn Categorization Project, or PCP for short is exactly the same as the ad survey one, but with a lot more dicks, the system spits out an image and you are presented with a bunch of options to tag the image as, the options seem to be common porn categories like Interracial, Solo, Lesbian and etc, each one you do, you get a few fractions of a cent, but it adds up quickly.
+
+	There is a big warning on the site that they mix in images with confirmed categorizations done by "Professionals" whatever the hell that means, and as such if you get those wrong you might be kicked from the program for "COMPROMISING THE INTEGRITY OF THE COLLECTION".@@
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerThink;Fucking hell people take some shit way to seriously.@@
+	<<finally>>\
+	@@.Narrator;Your webpage shows the interface for the Porn Categorization Project (PCP), encouraging you to work categorizing and old pervert's porn collection in exchange for money.@@
+	<</first>>\
+
+	<<linkreplace "Start Categorization">>\
+	<<job_porn_survey>>\
+	<</linkreplace>>
+
+:: job_survey_porn_correct
+	@@.Narrator;The site plays a small jingle accompanied by a Thank You!, and encourages you to continue working.
+
+	You oblige and keep working for an hour, after which you check your bank account and you are a few dollars richer.@@
+
+	<<set_time_increment 0>>\
+	<<add_time 1 0>>\
+	<<add "energy" -1>>\
+	<<add "mood" -10>>\
+	<<add "lust" +10>>\
+	<<add "money" 8 + random(0, 2)>>\
+	[[Go back to the job list|computer_jobs]]
+
+:: job_survey_porn_incorrect
+	@@.Narrator;The site plays a loud buzzer accompanied by a Wrong!, but apparently you can still try again.@@
+
+	<<add "mood" -5>>\
+	<<add "lust" +5>>\
+	[[Try again|job_survey_porn]]
+	[[Go back to the job list|computer_jobs]]

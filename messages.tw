@@ -1,0 +1,23 @@
+:: new_messages 
+\	<!-- Remember to change individual response conditions on each person if you change the variables here.-->
+\	<!-- Phoebe sent messages-->
+\	<<set $phoebe_message to false>>
+\	<<if $job_survey_porn && !$phoebe_talk_survey_porn>>
+\		<<set $phoebe_message to true>><<endif>>
+\	<<if $phoebe_talk_survey_porn && $computer_skill >= 1 && !$phoebe_camgirl_help_start>>
+\		<<set $phoebe_message to true>><<endif>>
+\	
+\	<!-- Donovan sent messages-->
+\	<<set $donovan_message to false>>
+\	<<if $don_fire && !$job_search>>
+\		<<set $donovan_message to true>><<endif>>
+\
+	<<if $phoebe_message>>\
+		You got a message from [[Phoebe|phoebe_sent_message]]!
+	<<elseif $donovan_message>>\
+		You got a message from [[Donovan|donovan_sent_message]]!
+	<<elseif $clint_message>>\
+		You got a message from [[XxX_5tarK1l1er_XxX|clint_sent_message]]!
+	<<else>>\
+		There are no new messages for you right now, but you can start a new conversation below!
+	<<endif>>\

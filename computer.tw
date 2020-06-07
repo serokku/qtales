@@ -1,0 +1,164 @@
+:: computer [computer]
+	<<image "images/locations/computer.jpg">>
+	<<set_time_increment 0>>\
+	<<if previous() is "bedroom">>\
+	@@.Narrator;You press the turn on key and wait a hilariously long time for the computer to actually boot.
+
+	And after crossing your fingers and praying for it to not instantly crash, the desktop happily greets you, waiting for your commands.@@\
+	<<else>>
+	@@.Narrator;The oldschool Winblows SP desktop happily greets you, waiting to do your bidding.@@\
+	<<endif>>
+
+	<<if $amazing_courses_plusplus is true>>\
+	[[Check for courses on AmazingCoursesPlusPlus|computer_courses]]
+	<<endif>>\
+	<<if $job_enabled is true>>\
+	[[Check available online jobs|computer_jobs]]
+
+	<<endif>>\
+	<<if $campop_enabled is true>>\
+	[[Log in to CamPop.com|computer_campop]]
+
+	<<endif>>\
+	<<if $kinklife_enabled is true>>\
+	[[Check peoples profiles on KinkLife|computer_kinklife]]
+
+	<<endif>>\
+	[[Check peoples profiles on OurSpace|computer_profiles]]
+	[[Check new posts on Chirpper|computer_chirpper]]
+	[[Check for messages on Talkings|computer_talkings]]
+	[[Buy things on Zahara|computer_shop]]
+
+	[[Turn off computer and go back to real life|bedroom]]
+
+:: computer_profiles [computer]
+	<<image "images/computer/ourspace.jpg">>\
+	
+	@@.Narrator;You open Netscape navigator and type OurSpace on the search bar, the shitty internet suffers a bit to load the page but in the end everything shows up fine.@@
+
+	[[$player_name|player_profile]]
+	[[Phoebe|phoebe_profile]]
+	[[Clint|clint_profile]]
+
+	[[Go back to the desktop|computer]]
+
+:: computer_kinklife [computer]
+	<<image "images/computer/kinklife.png">>\
+	
+	@@.Narrator;Not yet implemented, the idea is to have this be a more sexual-focused profile of the player and the other main characters, like clint and phoebe.
+
+	Maybe have a BDSMtest.org style YOU ARE THIS MUCH PERCENT SUB or some shit like that
+
+	Or have a kind of meta sexual attributes display, like in those JRPGs, 30ml of semen in your pussy, that kind of shit. but idk yet.
+
+	We'll see what the future holds.@@
+
+	[[Yay for future stuff!|computer]]
+
+:: computer_chirpper [computer]
+	<<image "images/computer/chirpper.jpg">>\
+
+	@@.Narrator;You open Netscape navigator and type Chirpper on the search bar, the shitty internet suffers a bit to load the page but in the end the most recent chirpps from your friends quickly fill up your screen.@@
+
+	<<linkreplace "Publish Chirpp">>\
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Stuck at home in quarantine :( And the dev hasnt really done anything with this yet, so this is the only chirpp possible rn@@
+	<</linkreplace>>\
+
+	[[Go back to the desktop|computer]]
+
+:: computer_talkings [computer]
+	<<image "images/computer/talkings.jpg">>\
+
+	@@.Narrator;You open Netscape navigator and type Talkings on the search bar, the shitty internet suffers a bit to load the page but you can quickly see the recent messages fill up the screen.
+	<<include new_messages>>
+	Online:@@
+	<<if $phoebe_online is true>>\
+		<<event_available  !$phoebe_talk || 
+							$phoebe_clint_talk == 1 ||
+							($tv_porn_enabled && 					!$porn_site_enabled) >>\
+		<<if $phoebe_message>>\
+		[[Phoebe|phoebe_sent_message]]
+		<<else>>\
+		[[Phoebe|phoebe_message]]
+		<<endif>>\
+	<<endif>>\
+	<<if $clint_online is true>>\
+		<<event_available $drone_intro == 1>>\
+		<<if $clint_message>>\
+		[[XxX_5tarK1l1er_XxX|clint_sent_message]]
+		<<else>>\
+		[[XxX_5tarK1l1er_XxX|clint_message]]
+		<<endif>>\
+	<<endif>>\
+	
+	@@.Narrator;Offline:@@
+	<<if $phoebe_online is false>>Phoebe 
+	<<endif>>\
+<!--	Abigail (Not in game)
+	Amber (Not in game)
+	Zoe (Not in game)
+	Johnny (Not in game)
+	Rudolphinger (Not in game) -->\
+	SrDonovan
+	<<if $clint_online is false>>XxX_5tarK1l1er_XxX
+	<<endif>>\
+
+	[[Go back to the desktop|computer]]
+
+:: computer_jobs [computer]
+	<center>@@.Clint; WELCOME MORTAL <<player_name>> TO CLINT'S ONLINE JOB AMALGAMATION SOFTWARE (licensed under GPL v3, source code available on github.com/stark1ll3r/job)
+
+	SEND ME A MESSAGE IF YOU THINK YOU GOT THE SKILLS FOR MORE JOBS AND I'LL LOOK FOR THEM, ALSO THERE IS A BUTTON TO ADD JOB OPORTUNITIES YOU MIGHT FIND ON ONLINE, GOOD LUCK <<player_name>>@@
+
+	<<if $job_survey>>\
+	<<event_available !$job_survey_porn>><<link_requirements "Online Advertisement Survey" "job_survey" 1 -0.9 0.1 -0.9>>
+	<<endif>>\
+	<<if $job_survey_porn>>\
+	<<link_requirements "Porn Categorization Project" "job_survey_porn" 1 -0.9 0.1 -0.9>>
+	<<endif>>\
+
+	[[Go back to the desktop|computer]]</center>
+
+:: computer_courses [computer]
+	<<image "images/computer/courses.png">>\
+
+	@@.Narrator;You open Netscape navigator and type Amazing Courses++, the shitty internet suffers a bit to load the page but soon you can see what courses are available to you right now.
+
+	<<if !$course_computer_0_bought>>\
+	Basic Computer Skills Course - <<print $course_computer_0_price>>$ <<buy $course_computer_0_price "course_computer_0_buy">><<elseif $computer_skill == 0>>\
+	Basic Computer Skills Course - [[Take Course|course_computer_0]]<<endif>>
+	@@
+	[[Go back to the desktop|computer]]
+
+:: computer_campop [computer]
+	<<image "images/computer/campop.jpg">>\
+
+	@@.Narrator;You open Netscape navigator and type Campop, the shitty internet suffers a bit to load the page but soon you can see loads of thumbnails of camgirls in varying states of undress and debauchery.
+
+	<<first>>\
+	After registering, you type PhittyKitty69 on the site's search bar and it quickly reveals you Phoebes profile.
+
+	[[Enter Phoebe's profile|phoebe_camgirl_profile]]\
+	<<finally>>\
+	[[Watch a random Camgirl stream|campop_random]]
+
+	[[Go back to the desktop|computer]]
+	<</first>>\
+
+:: computer_shop [computer]
+	<<image "images/computer/zahara.png">>
+
+	@@.Narrator;You open Netscape navigator and type Zahara, the shitty internet suffers a bit to load the page but soon you are presented with thousands of products available for sale.
+
+	<<first>>The site apparently is offering free Zahara Prime deliveries during the FLACCID-69 outbreak, using drones to deliver them to your doorstep (or balcony, if you live in a building with them), they promise INSTANT delivery everywhere on the planet.
+
+	We'll see about that.<</first>>
+
+	Groceries (10) - <<print $groceries_price>>$ <<buy $groceries_price "groceries_buy">>
+	<<if $drone_intro == 2>>\
+	(Dont buy it yet, you can't do anything with it rn) XJ-9 Professional Radio Interferometer - 200$ <<buy 200 "drone_buy">>
+	<<endif>>\
+
+	[[Go back to the desktop|computer]]
+	@@

@@ -1,0 +1,456 @@
+:: phoebe_camgirl_help_sent
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;HEY <<player_name>>, YOU SAID YOU WERE DOING A COMPUTER CLASS RIGHT???@@</div>
+	<<if $phoebe_online>>\
+		<<linkreplace "Phoebe is currently online, you can answer her right now.">>\
+		<<include phoebe_camgirl_help>>\
+		<</linkreplace>>\
+		\
+	<<else>>\
+	Phoebe is currently offline, you cannot answer her right now.
+
+	[[Go back to Talkings|computer_talkings]]
+	<<endif>>
+
+:: phoebe_camgirl_help
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Yeaaah, I finished it already, why?@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Ahhhhh goood, can you help me with something?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Ya, sure whatsup@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Welllllll..... I've got a new job, and I need some help with it.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Are you finally going to tell me what you have been doing?@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;<<gradual_trigger "*drumrolls*" "phoebe_camgirl_help_0" 0 true>>@@</div>
+
+	<<gradual_include 0>>
+
+:: phoebe_camgirl_help_0
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;CAMGIRLING!@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Oooooooooh.... That explains some things, and what can I help you with?@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;I've been doing it for a while, but it was mostly for fun before the whole firing thing, now I'm taking it a bit more seriously, I've been getting some pretty cool money from it, enough to not starve to death.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;You? Taking something seriously?@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;:P WELL IT IS PORN WE'RE TALKING ABOUT, YOU KNOW HOW SERIOUSLY I TAKE PORN@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;How big is the *ARCHIVE* right now Phebs?@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;2.5TB, actually, Clint's hooking me up with a new offline storage thing that makes things faster apparently.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Does he know what you're going to use it for?@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Of course he does, I'm not going to lie to him, also thanks for introducing him to me, he's pretty cool, kind of way to edgy nerdy sometimes but we're working on that, the nerdy part is fine, the edgy part is annoying.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;You're welcome, but you still haven't explained what you need me to do.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Well, the website I use has a chat, and sometimes some annoying assholes show up, and having to ban or time-out them is incredibly distracting, so I could use a moderator.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;OH GIVING ASSHOLES WHAT THEY DESERVE? THAT SOUND LIKE FUN, I'M IN.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;I KNEW YOU WOULD LIKE IT <3@@</div>
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;I'm online mostly at weeknights from 8 to midnight, but sometimes the show goes a bit longer, the site is CamPop.com and my name there is PhittyKitty69, tell me what your name is going to be so I can set you up as a moderator.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Uuuuu call me XxX_PussyDestroyer_XxX@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;HA WHOSE PUSSY YOU GON DESTROY HUH?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Oh you know which one.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Moist.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Alright, add me there, I'll see you later Phebes@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;❤️@@</div>
+
+	<<add_quest 2>>
+
+	<<set $phoebe_camgirl_help_start = true>>\
+	<<set $campop_enabled = true>>\
+	<<gradual_end>>\
+	[[Go back to Talkings|computer_talkings]]
+
+:: phoebe_camgirl_profile
+	<<image "images/characters/phoebe/campop/profile.png">>
+
+	@@.PhoebeSpeak;Helllloooooo <3
+
+	Welcome to my profile, come on, join me at my show if I'm online, I dont bite (Unless you want me to :3)
+
+	Hope you enjoooyyyy@@
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerThink;Yup, thats Phoebe alright, she's still offline, I should [[send|phoebe_camgirl_help_1]] her a message@@
+
+:: phoebe_camgirl_help_1
+	<<set_time_increment 0 0>>\
+	<<add_time 0 20>>\
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Pheeeeeeebs, I'm at your profile, you gonna start your show?@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;AH SORRY I'M A BIT LAAATE.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Dont worry babe, hmu when you are ready.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Alright <3@@</div>
+ 	
+ 	@@.Narrator;You wait around for about 20 minutes, Phoebe then finally shows up, and the [[show|phoebe_camgirl_help_first_show]] begins.@@
+
+:: phoebe_camgirl_help_first_show
+	<<image "images/characters/phoebe/campop/show_start.png">>
+	<<add_time 0 5>>\
+	@@.Narrator;You join the room as a moderator, there were a few people there already waiting for the show to begin.@@
+
+	@@.Phoebe;PHITTYKITTY69:@@
+	@@.PhoebeSpeak;GUYS I'M SO SORRY I'M LATEEE, but I am here now, how is everyone?@@
+
+	<div align=right>\
+	@@.Chat0;ORGAZMO78@@
+	@@.Chat0Speak;Hey Phitts, doin fine, how bout you?@@
+
+	@@.Chat1;CUNTOSSAUROS_REX@@
+	@@.Chat1Speak;Ugghh finallly.@@
+
+	@@.Chat2;++--++XCZ++--++@@
+	@@.Chat2Speak;YES, IT BEGINSSS@@
+
+	@@.Chat3;UNKNOWN99@@
+	@@.Chat3Speak;When's the show starting guys?@@
+	</div>\
+
+	@@.Phoebe;PHITTYKITTY69:@@
+	@@.PhoebeSpeak;TODAY WE HAVE A VERY SPECIAL GUEST, I want everyone to say Hi to XxXPussyDestroyerXxX, shes my BFF and she'll be doing the moderating todayyy.@@
+
+	<div align=right>\
+	@@.Chat0;ORGAZMO78@@
+	@@.Chat0Speak;Hi mod.@@
+
+	@@.Chat1;CUNTOSSAUROS_REX@@
+	@@.Chat1Speak;Mods are gay@@
+
+	@@.Chat2;++--++XCZ++--++@@
+	@@.Chat2Speak;HI PUSSY.@@
+
+	@@.Chat3;UNKNOWN99@@
+	@@.Chat3Speak;Who's this PussyDestroyer guy, what a stupid name.@@
+	</div>
+
+	@@.Player;XXXPUSSYDESTROYERXXX@@
+	@@.PlayerSpeak;Hey that's not nice, I took a whole 10 seconds to choose this name, it means a lot to me.@@
+
+	@@.Phoebe;PHITTYKITTY69:@@
+	@@.PhoebeSpeak;Now now, thats no way to treat our new mod, so you'll have the honor of being the first one to be timed out, show him your powers PD.@@
+
+	<div align=right>\
+	@@.Chat0;ORGAZMO78@@
+	@@.Chat0Speak;HAHA SHOW THEM PD@@
+	</div>
+
+	<<linkreplace "Time out Unknown99">>\
+	@@.ChatSystem;UNKNOWN99 WAS TIMED OUT FOR 10 MINUTES!@@
+
+	@@.Phoebe;PHITTYKITTY69:@@
+	@@.PhoebeSpeak;Good, now think about what you've done.
+
+	NOW, LETS BEGIN THE SHOW
+
+	Today we'll do a strip show, as an apology for being late.
+
+	PD, if you see anyone being a complete asshole, timeout them, if its a repeat offender, ban him.@@	
+
+	@@.Player;XXXPUSSYDESTROYERXXX@@
+	@@.PlayerSpeak;Alright Boss, keep it civil boys.@@
+
+	[[Phoebe then turns on the music and begins her show|phoebe_camgirl_help_first_show_0]]
+	<</linkreplace>> 
+
+:: phoebe_camgirl_help_first_show_0
+	<<add_time 0 10 true>>\
+	<<add "lust" 15>>\
+	<<image "images/characters/phoebe/campop/show0.webm">>
+
+	@@.Player;<<player_name>> (Thinking)@@
+	@@.PlayerThink;Oh boy.@@
+
+	<div align=right>\
+	@@.ChatSystem;Unknown99 disconnected from the chat.@@
+
+	<<campop_mod>>@@.Chat0;ORGAZMO78@@
+	@@.Chat0Speak;Nice, the show begins@@
+
+	<<campop_mod>>@@.Chat1;CUNTOSSAUROS_REX@@
+	@@.Chat1Speak;Hell yeah@@
+
+	@@.ChatSystem;LargeBoi22 connected to the chat.@@
+
+	<<campop_mod>>@@.Chat2;++--++XCZ++--++@@
+	@@.Chat2Speak;DAMN GIRL THAT'S A NICE ASS@@
+
+	<<campop_mod "phoebe_camgirl_help_advert_to" 1 "phoebe_camgirl_help_advert_ban" 1>>@@.Chat4;LARGEBOI22@@
+	@@.Chat4Speak;CHEAP PENIS ENLARGEMENT PILLS AT THIS LINK, ALL THE LADIES WILL LOVE YOU! @@
+	</div>
+
+	@@.Player;<<player_name>> (Thinking)@@
+	@@.PlayerThink;Yeah right, cant have any of that, Phoebe hasn't told me to ban advertisement bots but I consider that assholey enough.@@
+
+	[[Phoebe continues the show|phoebe_camgirl_help_first_show_1]]
+
+:: phoebe_camgirl_help_first_show_1
+	<<add_time 0 15 true>>\
+	<<add "lust" 15>>\
+	<<image "images/characters/phoebe/campop/show1.webm">>
+	@@.Player;<<player_name>> (Thinking)@@
+	@@.PlayerThink; ...Phoebe can be really hot sometimes...@@
+
+	<div align=right>\
+	@@.ChatSystem;LargeBoi22 disconnected from the chat.@@
+
+	<<campop_mod>>@@.Chat1;CUNTOSSAUROS_REX@@
+	@@.Chat1Speak;If he was such a large boy, why does he need penis enlargement pills?@@
+
+	<<campop_mod>>@@.Chat0;ORGAZMO78@@
+	@@.Chat0Speak;No idea@@
+
+	<<campop_mod>>@@.Chat2;++--++XCZ++--++@@
+	@@.Chat2Speak;YEAH GIRL SHOW DEM PUPPIES@@
+	</div>
+
+	@@.Player;<<player_name>> (Thinking)@@
+	@@.PlayerThink;...Reeeally hot... Fuck I have a job to do, did anyone break the rules?@@
+
+	[[Phoebe continues the show|phoebe_camgirl_help_first_show_2]]
+
+:: phoebe_camgirl_help_first_show_2
+	<<add_time 0 15 true>>\
+	<<add "mood" 10>>\
+	<<add "lust" 15>>\
+	<<image "images/characters/phoebe/campop/show2.webm">>
+	@@.Player;<<player_name>> (Thinking)@@
+	@@.PlayerThink; Alright, back to the show, wait when did she lose the dress?...@@
+
+	<div align=right>\
+	<<campop_mod>>@@.Chat2;++--++XCZ++--++@@
+	@@.Chat2Speak;FUCK YEAH THIS IS GREAT!@@
+
+	@@.ChatSystem;Orgazmo78 donated 20$!@@
+	</div>\
+
+	@@.Player;<<player_name>> (Thinking)@@
+	@@.PlayerThink; ... Oh hey, thats the first donation today, and damn, 20 bucks just for some dancing, thats pretty good ...@@
+	
+	@@.Phoebe;PHITTYKITTY69:@@
+	@@.PhoebeSpeak;Thanks Orgeeee, you know I love youuu <3@@
+
+	<div align=right>\
+	<<campop_mod>>@@.Chat0;ORGAZMO78@@
+	@@.Chat0Speak;Love you too babe.@@
+	
+	<<campop_mod "phoebe_camgirl_help_asshole_to" 1 "phoebe_camgirl_help_asshole_ban" 1>>@@.Chat5;ASSLOVER07@@
+	@@.Chat5Speak;This is lame, this slut is just dancing, I came here to see this bitch squealing.@@
+	</div>\
+
+	@@.Player;<<player_name>> (Thinking)@@
+	@@.PlayerThink; ... Thats not nice ...@@
+
+	[[Phoebe continues the show|phoebe_camgirl_help_first_show_3]]
+
+:: phoebe_camgirl_help_first_show_3
+	<<add_time 0 15 true>>\
+	<<add "mood" 10>>\
+	<<add "lust" 15>>\
+	<<image "images/characters/phoebe/campop/show3.webm">>
+	@@.Player;<<player_name>> (Thinking)@@
+	@@.PlayerThink; ... Fuck, I think she's a bit nervous ... Is it because I'm watching? ... Thats kinda hot ...@@
+
+	<div align=right>\
+	<<campop_mod>>@@.Chat2;++--++XCZ++--++@@
+	@@.Chat2Speak;WWOOOO!@@
+ 
+	@@.ChatSystem;++--++XCZ++--++ donated 5$!@@
+	</div>\
+
+	@@.Phoebe;PHITTYKITTY69:@@
+	@@.PhoebeSpeak;Thanks X!@@
+
+	@@.Player;<<player_name>> (Thinking)@@
+	@@.PlayerThink; ... Shit, I think I'm starting to get wet, is that wrong? ...@@
+
+	<<image "images/characters/phoebe/campop/wet.webm">>
+
+	[[Phoebe continues the show|phoebe_camgirl_help_first_show_4]]
+
+:: phoebe_camgirl_help_first_show_4
+	<<add_time 0 15 true>>\
+	<<add "mood" 10>>\
+	<<add "lust" 20>>\
+	<<image "images/characters/phoebe/campop/show4.webm">>
+
+	@@.Player;<<player_name>> (Thinking)@@
+	@@.PlayerThink; ... Fuck, Phoebe ... @@
+
+	<<image "images/characters/phoebe/campop/mastr.webm">>
+
+	@@.Player;<<player_name>> (Thinking)@@
+	@@.PlayerThink; ... Oooh ... Yess Phoebe, you can sit on my face ... Ahh... @@
+
+	[[...|phoebe_camgirl_help_first_show_5]]
+
+:: phoebe_camgirl_help_first_show_5
+	<<add_time 0 15 true>>\
+	<<image "images/characters/phoebe/campop/show_5.png">>
+
+	@@.Narrator;The sound of Phoebe calling your username through the computer breaks you off your fantasies.@@ 
+
+	@@.Phoebe;PHITTYKITTY69:@@
+	@@.PhoebeSpeak;I think our moderator has lost her connection, so I'll do the banning, So long Unknown99.@@
+
+	@@.Player;<<player_name>> (Thinking)@@
+	@@.PlayerThink; Wait what?@@
+
+	@@.Narrator;You look back through the chat log.@@ 
+
+	<div align=right>\
+	@@.Chat3;UNKNOWN99@@
+	@@.Chat3Speak;YOU FUCKING SLUTS TIMED ME OUT, IMMA SPAM YOUR ASSES YOU BITCHES REEEEEEEEEEEEEEEEEEE.@@
+
+	@@.Chat3;UNKNOWN99@@
+	@@.Chat3Speak;REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE@@
+	
+	@@.Chat0;ORGAZMO78@@
+	@@.Chat0Speak;Yo mod, ban that cunt.@@
+
+	@@.Chat3;UNKNOWN99@@
+	@@.Chat3Speak;FUCK YOU SIMP, SUCK MY DONG. REEEEEEEEEE@@
+	</div>\
+
+	@@.Player;<<player_name>> (Thinking)@@
+	@@.PlayerThink; Oh boy.@@
+
+	@@.Player;XXXPUSSYDESTROYERXXX@@
+	@@.PlayerSpeak; Ah feck, sorry guys, my internet shat out a bit here.@@
+
+	@@.Phoebe;PHITTYKITTY69:@@
+	@@.PhoebeSpeak; No problems babe, I'll get back to the show.@@
+
+	<div align=right>\
+	@@.Chat0;ORGAZMO78@@
+	@@.Chat0Speak;No worries PD.@@
+
+	@@.Chat2;++--++XCZ++--++@@
+	@@.Chat2Speak;YEAHHHH PD DONT EVEN SWEAT IT@@
+	</div>\
+
+	[[Phoebe finishes the show|phoebe_camgirl_help_first_show_6]]
+
+:: phoebe_camgirl_help_first_show_6
+	<<add_time 0 45>>\
+	<<image "images/characters/phoebe/campop/show_final.webm">>
+
+	@@.Narrator;The rest of the show goes by without any hiccups, after it ends, Phoebe sends you a [[message|phoebe_camgirl_help_end]] on Talkings.@@ 
+
+:: phoebe_camgirl_help_end
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Ahhhh, that was a nice show, how was moderating?@@</div>
+	
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Yeah that was pretty cool!@@
+<<if $phoebe_camgirl_help_advert_ban == 0 && $phoebe_camgirl_help_advert_to == 0 && $phoebe_camgirl_help_asshole_ban == 0 && $phoebe_camgirl_help_asshole_to == 0>>\
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Thanks for the help, but babe, you did a SHIT job, you didn't do anything to that advertising bot OR that one asshole...@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Ahh I'm sorry :( I promise I'll do better next time@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;It's fine babe, its not like you done this before, but now you have EXPERIENCE...@@</div>
+<<else>>\
+	<<if $phoebe_camgirl_help_asshole_ban == 1>>\
+
+		<div align="right">@@.Phoebe;PHOEBE:@@
+		@@.PhoebeSpeak;Thanks for the help, but that asshole guy you banned should've been timed out, he wasn't a repeat offender, but I wont hold that over you, that dude was a cunt.@@</div>
+	<<endif>>\
+	<<if $phoebe_camgirl_help_advert_to == 1>>\
+
+		<div align="right">@@.Phoebe;PHOEBE:@@
+		@@.PhoebeSpeak;Oh, I'm sorry I forgot to tell you but that advert bot, should've been banned right away, but its fine :)@@</div>
+	<<endif>>\
+<<endif>>\
+<<if $phoebe_camgirl_help_asshole_to == 1 && $phoebe_camgirl_help_advert_to == 1>>\
+	
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Thanks for the help, you did an EXCELLENT job moderating ❤️ You are welcome at the show everytime ...@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Ahh thanks!!! I'll come back other days, its not like I'm doing anything at home. <3@@
+<<endif>>\	
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;... Did you watch the show?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Yeaahh! very hot, I'm sure everyone enjoyed it.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Did you enjoy it?.@@</div>
+
+	@@.Player;<<player_name>> (Thinking):@@
+	@@.PlayerThink;Oh boy.@@
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Yeah I did.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Good, glad to hear it :)@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;:)@@
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Imma head out, see ya Phebs@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Okayyy, bye bye ❤️@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;<3@@
+
+	@@.Player;<<player_name>> (Thinking):@@
+	@@.PlayerThink;That was an interesting experience, Phoebe sounded a bit glad that I paid some attention to her show...@@
+
+	<<set_quest_stage 2 1>>
+	<<set $phoebe_camgirl_help_end to true>>\
+	[[Go back to the desktop|computer]]

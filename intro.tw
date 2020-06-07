@@ -1,0 +1,125 @@
+:: content_warning
+	<center>\
+	<h1 style="color:red">CONTENT WARNING</h1>
+	<img src="images/esrb_ao.png">
+
+	@@.Narrator;This game has graphic and sexual imagery and themes, and as such is tremendously not suited for people under the age of 18.
+
+	Any resemblance to people, alive or dead are a mere illusion and has absolutely nothing to do with the shameless "borrowing" of images perpetrated by the developer of this game. 
+
+	If I use an image of you or made by you and you want it removed from the game, send me a message on the F95zone forums and it will be promptly removed.
+
+	Pls dont sue.
+
+	All characters in this game are over the age of 18.
+
+	The actions commited by some characters can be very illegal and can be extremely morally reprehensible, dont imitate what a porn game shows you.
+
+	Also, please dont take anything you see here seriously, come-on, its a porn game, what do you expect?@@
+
+	[[I am 18 or over and I am ready for some GOOD OLD PORNOGRAPHY|CharacterNamer]]
+	</center>\
+
+:: CharacterNamer
+	<h1><div align="center"><img src="images/logo.png" width="100%"></div></h1>\
+	@@.Narrator;<h2>Welcome, denizen of the Internet!</h2>\
+	This is Quarantine Tales, the latest in the crapfest that are Twine porn games made with stolen assets, this whole thing is being made by me, a Brazillian dude in my bedroom while I am stuck at home due to the currently ongoing COVID-19 pandemic, things are improving a bit and the quarantine is being eased, but things are still pretty shit, so this game is being made as a way to have a little bit of fun.
+
+	Some ideas have been festering in my mind for a while, so this is not simply "Lets mess around and make some shit!", but the ongoing situation gave me some free time, so hey, lets use it to create something.
+
+	I hope you have fun!        
+
+	Below you can customize the main character's names:
+
+	Main Character (Female) <<textbox "$player_name" "Saren">> 
+
+	Also, there is a debug mode available, I do recommend playing with it turned on while the game is in early development (i.e now), check this pretty little box if you want it enabled!  <<checkbox "$debug_mode" false true>>
+	@@
+	[[Done! |Intro]]
+
+:: Intro 
+	<<set $intro to true>>\
+	@@.Action;The door makes a locking sound@@
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Ahhhh.... Finally home...@@
+
+	<<gradual_trigger "Take off mask" "Intro2" 0>>\
+	<<gradual_include 0>>
+
+:: Intro2 
+	@@.Action;The mask disintegrates after you take it off@@
+
+	@@.Player;<<player_name>> (Thinking):@@
+	@@.PlayerThink;These masks are fucking crap, and this was my last one too.
+
+	I need to get some new ones.
+
+	Or make them... 
+
+	Thats not a bad idea, how do I make masks?@@
+
+	<<gradual_trigger "Turn on TV" "Intro3" 1>>\
+	<<gradual_include 1>>
+
+:: Intro3 
+	@@.Action;The tv turns on, showing an episode of @@@@.Red;//''Daffy Duck''//@@
+	
+	<div align="center">[img[images/intro/daffy.gif]]</div>
+
+	@@.Player;<<player_name>> (Thinking):@@
+	@@.PlayerThink;Ahhhh... The simple pleasures of Daffy Duck.@@
+
+	<<gradual_trigger "Go grab a beer on the fridge and laze off watch Daffy Duck" "Intro4" 2>>\
+	<<gradual_include 2>>
+
+:: Intro4 
+	@@.Action;Your thoughts of grabbing a beer are interrupted by a sudden breaking news logo appearing on TV@@
+
+	<div align="center">[img[images/intro/breakingnews.gif]]</div>\
+	
+	<<gradual_end>>\
+	[[Stay seated and watch wtf is going on|Intro5]] 
+
+:: Intro5 
+	<div align="center">[img[images/intro/news.webp]]</div>
+	@@.AnnaBloume;NEWSCASTER RIGHT:@@
+	@@.AnnaBloumeSpeak;This is Anna Bloume.@@
+
+	@@.KevinHardikk;NEWSCASTER LEFT@@
+	@@.KevinHardikkSpeak;And this is Kevin Hardikk, and you are watching NNN Breaking News.@@
+
+	@@.AnnaBloume;ANNA BLOUME:@@
+	@@.AnnaBloumeSpeak;The state government has declared obligatory quarantine for all citizens working in non-essential fields.
+
+	All personnel that fit the criteria are to stay locked-down at home for the duration of the FLACCID-69 pandemic.@@
+
+	@@.KevinHardikk;KEVIN HARDIKK:@@
+	@@.KevinHardikkSpeak;Governor Bergostein has declared the news a few minutes ago in a surprise annoucement via Chirpper.
+
+	We go now live to Claire Succmeof at the state capit....@@
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Ahhhhh Fuck...@@
+
+	@@.Player;<<player_name>> (Thinking):@@
+	@@.PlayerThink;Everyone was already expecting this for a while, there were a few cases in the neighborhood, and the situation state-wide was not very good.
+
+	Well, I am non-essential, so I am out of a job for a while, and I doubt that CUNT of a boss will pay me during this shit.@@
+
+	@@.ClaireSuccmeoff;CLAIRE SUCCMEOFF (on tv):@@
+	@@.ClaireSuccmeoffSpeak;.... there have been talks of the creation of a social assistance payment for people financially affected by the pandemic ....@@
+
+	@@.Player;<<player_name>> (Thinking):@@
+	@@.PlayerThink;Not going to starve to death at least.
+
+	I should check my fridge for supplies.@@
+	\
+	<<set $intro_kitchen_objective to true>>\
+	<<set $tv_on to true>>\
+	<<set $tv_content to "news">>\
+
+	<<add_quest 0>>
+	
+	[[Get up |living_room]]
+

@@ -1,0 +1,168 @@
+:: phoebe_survey_porn_sent
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;HEY <<player_name>> DID YOU MANAGE TO FIND A NEW JOB?@@</div>
+	<<if $phoebe_online>>\
+		<<linkreplace "Phoebe is currently online, you can answer her right now.">>\
+		<<include phoebe_talk_survey_porn>>\
+		<</linkreplace>>\
+		\
+	<<else>>\
+	Phoebe is currently offline, you cannot answer her right now.
+
+	[[Go back to Talkings|computer_talkings]]
+	<<endif>>
+:: phoebe_talk_survey_porn
+	<<set $phoebe_talk_survey_porn to true>>\
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Hey Phebs, actually, yes I did.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;NICE, me too, what is it?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Well, Clint hooked me up with an ad survey site thing, payed miserably.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Thats not very good.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;It isn't, HOWEVER, while doing it I found a different job, and that one pays SLIGHTLY better, if you disregard the embarassment of doing it.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;If you're doing porn and haven't invited me THIS FRIENDSHIP IS OVER.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;I'M NOT DOING PORN PHOEBE, but my job is related to porn.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;*rolls eyes* There's nothing wrong with doing porn $player_name, but come onnn what is it.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Of course there isn't anything wrong in doing porn, well, there's this old pervert that has collected a HUGE assortment of porn, and he's paying random people to categorize it all.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Uuuuuuu thats kinda interesting, so you've been watching porn all day $player_name, see anything interesting?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;It's not like I want to watch porn all day, I'm not a degenerate like you or Clint.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Ahhhhhhhh come onnn dont say you dont enjoy some of it.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Alright.... just a little bit.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;You saved some clips right?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Might have.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Send me your favoritesssss@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;WHAT WHY@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Comeooooonnn, I want to see what makes your box squeak.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;That doesn't even make sense, but alright, let me choose one.@@
+
+	[[Interracial Artsy Masturbation Clip|phoebe_talk_survey_porn_int]]
+	[[Bondage/Forced Orgasm Clip|phoebe_talk_survey_porn_bdsm]]
+
+:: phoebe_talk_survey_porn_int
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Here, this is one I saved earlier.@@
+
+	<<image "images/characters/phoebe/porn_survey_talk/int0.gif">>
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;UUUUuuuuuUUUU Interracial, whats the matter babe, got some black mamba fever?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Slightly racist Phoebe@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Would I bang black dudes if I was racist?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;That point makes no sense, BUT WHATEVER, I like this clip, its very artistic, look at the contrast and damn@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Cant argue with that, its very artistic, wouldn't be my first choice of an interracial clip.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Alright, then what would be YOUR choice of an interracial clip?@@
+
+	<<image "images/characters/phoebe/porn_survey_talk/int1.webm">>
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;BAM@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Jesus that's a lot of cum.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;The more the merrier, that's what I always say, like it?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Way to explicit for me, but intriguingly hot, I'll give you that.@@
+
+	<<include phoebe_talk_survey_porn_conclusion>>
+
+:: phoebe_talk_survey_porn_bdsm
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Here, this is one I saved earlier.@@
+
+	<<image "images/characters/phoebe/porn_survey_talk/bdsm0.webm">>
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;UUUUuuuuuUUUU Kinky, I like it@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;The thought of just cumming repeatedly for ages.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Makes you MOIST?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Maybe.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;I have a SIMILAR clip, want it?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Yeah, sure.@@
+
+	<<image "images/characters/phoebe/porn_survey_talk/bdsm1.webm">>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;That's basically the same clip Phoebe, just in a different setting, might even be the same girl.@@
+
+	<<include phoebe_talk_survey_porn_conclusion>>
+
+:: phoebe_talk_survey_porn_conclusion
+	<<set_time_increment 0>>\
+	<<add_time 0 45>>\
+	<<add "mood" 30>>\
+	<<add "lust" 40>>\
+	<<override_state "phoebe" "online" false 6>>\
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;That's one of the girls from my new job.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Pheeeebs.... What exactly have you been working on?@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;AHHH THATS A SURPRISE, still need to figure some stuff out, but it's pretty cool.@@</div>
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;SPEAKING OF WHICH I gotta go, luv you babe, enjoy cranking one out to the clip, I'll send you the entire video lateeer ❤️@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Hmmm alright, luv you too.@@
+
+	[[Go back to Talkings|computer_talkings]]

@@ -1,0 +1,9 @@
+:: eat [kitchen]
+	<<set_time_increment 0 0>>\
+	<<add_time 0 40 true>>\
+	<<add "hunger" -75>>\
+	<<add "mood" 10>>\
+	<<add "supplies" -1>>\
+	@@.Narrator; You quickly whip up a meal using what resources you have, the results aren't bad but you've had better in your life too, but it is feeling and it staves off the feeling of hunger.@@
+
+	[[Continue with your day|kitchen]]

@@ -1,0 +1,14 @@
+:: bedroom [bedroom]
+<<if $is_night>><<image "images/locations/bedroom_night.jpg">><<else>><<image "images/locations/bedroom.jpg">><<endif>>
+<<set_time_increment 5>>\
+@@.Narrator;Your bedroom, the place where you spend most nights, and the place where you will keep spending most nights, considering the current lockdown.
+
+Your trashy old [[computer]] lies on top of your bed, eagerly waiting for you to hop back online, and satisfy his (And yours) thirst for the sweet sweet internet.@@<<first>> @@.Narrator;The thing is a piece of shit that just cant help himself to not crash every 5 minutes, It is still running a pirated copy of Winblows SP, which is about 10 years old at this point, and it is quite amazing that it still manages to run. 
+
+You really need a new computer, but you didn't have money to buy a new one after you bought the TV, in retrospect, buying a TV over upgrading your PC seems to have been a bad idea.
+
+But then you remember how crispy the cartoons look on your new TV and you quickly come back to your senses.@@<</first>>
+
+[[Sleep|sleep]]
+
+[[Living Room|living_room]]

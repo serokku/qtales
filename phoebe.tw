@@ -1,0 +1,236 @@
+:: phoebe_profile [computer]
+	<div align="center"><img src="images/characters/phoebe/profile.jpg" width="100%"></div>\
+
+	@@.PhoebeSpeak;\
+	Heeeeeeey everyone ❤️
+	Welcome to my OurSpace page! @@
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerThink;Phoebe still hasn't returned my Goonies t-shirt.@@
+
+	[[Go back|computer_profiles]]
+
+:: phoebe_sent_message
+	<<if $job_survey_porn && !$phoebe_talk_survey_porn>>\
+		<<include phoebe_survey_porn_sent>>\
+	<<endif>>\
+	<<if $phoebe_talk_survey_porn && $computer_skill >= 1 && !$phoebe_camgirl_help_start>>\
+		<<include phoebe_camgirl_help_sent>>\
+	<<endif>>\
+
+:: phoebe_message
+	<<if $phoebe_talk is 0>>\
+		<<include phoebe_talk_0>>\
+	<<elseif $phoebe_clint_talk is 1>>\
+		<<include phoebe_talk_clint>>\
+	<<elseif $tv_porn_enabled && !$porn_site_enabled >>
+		<<include phoebe_talk_porn_channel>>\
+	<<else>>\
+		<<include phoebe_talk_default>>\
+	<<endif>>\
+	
+:: phoebe_talk_0
+	<<set $phoebe_talk to 1>>\
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Hey Phebs@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;AHHHHH HEY <<player_name>> DID YOU SEE THE NEEEWS?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Yeah, just saw it.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Im reeeeally worried about you :( are you going to be okay by yourself? I can go over if you want to hang out@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;You think it would be okay?@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;¯\_(ツ)_/¯ should be fiiiiiine, the thing only affects old fucks anyhow and its not like i live very far away HIHIHI@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Hehe, I guess you're right, but I'm going to be fine, I think I'll stay by myself today, but I'll take a raincheck on that.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Okayyy :( @@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Donnnt be like that you know I lub you grill <3@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;:) ❤️@@</div>
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;But anyway what are you going to do today?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;I'm not really sure, I should probably go get some supplies, maybe call Don and figure out whats going to happen at work, did you get any messages from him?@@
+	<<set $don_fire to 1>>
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Oh... You didn't get his message?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;No, is everything okay?@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Don is locked down in the hospital, he purposefully contracted it, he is being one of the guinea pigs for the vaccines.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;The cunt is taking the money from the experiment and bailing on us?@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Yeeeeah...@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Fuck, is that even legal?@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;According to Mom kinda?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Well, at least now I have something to do today, try to find a new job.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Ye me too, if you find something let me know ❤️@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;I will <3, gonna head out, luv you babe xoxo@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;luv u too ❤️@@</div>
+	<<add_time 0 45>>\
+
+	[[Go back to Talking|computer_talkings]]
+
+:: phoebe_talk_clint
+	<<set $phoebe_clint_talk to 2>>\
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Hey Phebs@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;HEYA <<player_name>> ❤️@@</div>
+		
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;You'll never guess who has a crush on you.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;U.U Whooooo? (You?)@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Well of course, but that was not who I was referring to.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Hmmmmmmm, no clue@@</div>
+		
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Remember that nerdy boy that came to the shop one time?@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Uuuuuuu yeeah I remember, He wants to get it on with me?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Yup, His name is Clint, I gave him your Talkings contact, you might get a message from him, he's a bit shy.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Ooooooh thats kinda cuteee, what's he like?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;He's a huge nerd, extremely degenerate, we used to hang out in high-school.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;HMMMMMMMM "HANG OUT"?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;SHUT UP PHOEBE. We had our moment, I think I was his first kiss, but he got too clingy and we stopped talking for a while, we reconnected eventually.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;OH MAN THAT'S EXTREMELY CUTE@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Depends on how you define cute.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Well I think its cute >.< but alright, I'll talk to him@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;You'll like him, He's a bit weird.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Do I have to remind you of the things we used to do at the shop? Doesn't get much weirder than that.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;HAHA nah, he manages to be weirder, but he's nice, you'll see.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;He's a perv right?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;One of the best.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Just the way I like it.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Hehe, Imma go do some stuff, see ya Phebes <3@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;❤️@@</div>
+
+	<<add_time 0 45>>\
+	[[Go back to Talking|computer_talkings]]
+
+:: phoebe_talk_porn_channel
+	<<set $porn_site_enabled to true>>\
+	<<add "lust" 20>>\
+	<<add_time 20>>\
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;You will never believe what I found out on my TV.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;That all the porn channels are unlocked?@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Fuck how did you know that I was going to say that.@@
+	
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;You're talking about TV, with ME, what was the logical conclusion :3@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Good point, but yeah, all the porn channels are unlocked.@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;Eh, I dont really like the whole overly produced porn movies, I'm more of an Amateur online video type of gal.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;I see....@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;HEHE I'LL SEND YOU THE LINKS DONT WORRY ❤️@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Heh alright then.@@
+
+	@@.Narrator;Phoebe then spends the next 20 minutes sending you different porn sites.@@
+
+	[[Go back to Talkings|computer_talkings]]
+
+:: phoebe_talk_default
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Hey Phebs@@
+
+	<div align="right">@@.Phoebe;PHOEBE:@@
+	@@.PhoebeSpeak;HIIII <<player_name>>, wassup? &#94;&#94;@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Not much hby?@@
+
+	@@.Narrator;You and Phoebe spend the next half an hour talking about some random crap.@@
+	<<set_time_increment 0>>\
+	<<add_time 0 30>>\
+	<<add "mood" 10>>\
+
+	[[Awesome|computer_talkings]]
+
+

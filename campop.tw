@@ -1,0 +1,15 @@
+:: campop_random [computer]
+	@@.Narrator;TODO@@
+	<<first>>\
+	<<goto unlock_kinklife>>\
+	<</first>>\
+
+	<<show_random_image "campop_random">>
+
+	[[Go back to desktop|computer]]
+
+:: unlock_kinklife [computer]
+	@@.Narrator;TODO You were randomly pressing buttons and doing shit around and came across this kinklife website, it got unlocked.@@
+
+	<<set $kinklife_enabled to true>>
+	[[Yay!|campop_random]]

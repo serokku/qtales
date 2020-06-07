@@ -1,0 +1,6 @@
+:: pussy_dripping
+	<<show_random_image "pussy_dripping">>
+
+	@@.Narrator; Your pussy is dripping wet.@@
+
+	<<back "Return your focus to what you were doing">>

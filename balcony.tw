@@ -1,0 +1,28 @@
+:: balcony [balcony]
+	<<if $is_night>><<image "images/locations/balcony_night.jpg">><<else>><<image "images/locations/balcony.jpg">><<endif>>\
+	<<set_time_increment 5>>\
+
+	@@.Narrator;This balcony is a good place to reflect on life, you can see most of the city from here.
+
+	The view is quite good, the perks of living in the last floor of the building, you paid a bit extra for this, but it was totally worth it.
+
+	To the side you can see your neighbors balcony, being that his apartment is basically a mirror version of yours. Sometimes you can see him or his wife there enjoying the view, you always say hi, they are a really nice couple, and never bothered you.@@
+
+	<<first>>\
+	@@.Narrator;There was that one time you heard them loudly having sex through the walls, but you didn't say anything and it hasn't happened again, you theorize that they did it in the living room for a change pace, and might have forgotten the balcony window open, but you dont really mind, in fact, it was kind of hot.@@
+
+	<</first>>\
+	<<if $drone_intro == 3 && !$is_night>>\
+	@@.Narrator;You can see a small drone flying around in the distance, it seems to be flying close to windows, trying to see whats inside.
+
+	You make a mental note, that if it is dark out, it would be almost impossible to see it.@@
+
+		<<if $computer_skill < 1>>\
+		@@.Narrator;Taking a look at the device you bought, reveals to you that you have absolutely no clue about how it works.@@
+		<<else>>\
+		[[Point antenna at the drone and hijack it|drone_capture]]
+		<<endif>>\
+	<<endif>>\
+	[[Living Room|living_room]]
+
+

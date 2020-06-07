@@ -1,0 +1,35 @@
+:: bathroom [bathroom]
+	<<image "images/locations/bathroom.jpg">>
+	<<set_time_increment 5>>\
+	@@.Narrator;This is your bathroom, it has a toilet, and a showerhead, truly, the pinnacle of bathroom technology.@@
+	
+	<<if $shower_day is true>>\
+	@@.Narrator;The shower box is still a bit wet from your earlier shower.@@
+	
+	<<endif>>\
+	[[Check mirror|bathroom_mirror]]
+	<<if !$shower_day>>[[Take shower|bathroom_shower]]
+	<<endif>>\
+
+	[[Living Room|living_room]]
+
+:: bathroom_shower [bathroom]
+	<<set $shower_day to true>>\
+	<<add_time 0 45>>\
+	<<add "mood" 30>>\
+	<<image "images/bathroom/shower.webm">>
+
+	@@.Narrator;During your shower you think about everything that's going on in the world, the prospect of having to stay at home for an unknown amount of time.@@	
+
+	<<first>>@@.Narrator;Thankfully you have one of your best friends living in the same building as you, meeting her shouldn't be an issue right?@@<</first>>
+
+	[[Dry off and leave the shower.|bathroom]]
+
+:: bathroom_mirror [bathroom]
+	<<image "images/bathroom/mirror.jpg">>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerThink;I miss resting this fine piece of ass on some lucky bastards face.@@
+
+	[[Return your focus to the rest of the bathroom|bathroom]]
+	

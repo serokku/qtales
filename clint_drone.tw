@@ -1,0 +1,56 @@
+:: clint_drone
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Bitch you won't believe what happened.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Good talking to you too $player_name, I've been great how about you?.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Some little shit is flying a drone around and spying on me.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;OOooooooh.... That's what I'd call a dick move.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Yup, how can I fuck him up?@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Hmmm these drones are expensive, taking control of it and never giving it back would be good.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;How do I do that?@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Depends on the drone. You've been doing those computer skills courses from AC++ right?@@</div>
+
+	<<if $computer_skill > 1>>\
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Yeahh, I've done the first one.@@
+	<<else>>\
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Didn't get around to it yet.@@
+	<<endif>>\
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;I'll send you some instructions, basically you need to buy an XJ-9 class radio hijacker, you can get one on Zahara, but you'll need some basic computer skills. The first course should be enough.
+
+	So you buy that, and then just point the antena at it and press the buttons to start the hijacking. It changes the ID so whoever owned it will never be able to use it again, and you gain a drone.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;How expensive is the XJ-9 thingy?.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Couple hundo's@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Shit.@@
+
+	<div align="right">@@.Clint;CLINT:@@
+	@@.ClintSpeak;Yea, Shit.@@</div>
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerSpeak;Well alright, thanks Clint.@@
+
+	<<set $drone_intro to 2>>\
+	<<set_quest_stage 3 1>>
+	[[Go back to Talkings|computer_talkings]]

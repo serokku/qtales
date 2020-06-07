@@ -1,0 +1,130 @@
+:: StoryTitle
+	Quarantine Tales
+
+:: StoryBanner
+	<div align="center"><img src="images/logo.png" width="100%"></div>\
+
+:: StoryData
+{
+	"ifid": "3A1AC78A-2AC9-467C-AE7A-9E86035946E1",
+	"format": "SugarCube",
+	"format-version": "2.31.1",
+	"start": "content_warning",
+	"zoom": 0.6
+}
+
+:: StoryCaption
+	@@.PlayerNameSidebar;<<print $player_name>>@@
+	Day <<print $cur_day>>, <<print $week_day>>
+
+	<<if $debug_mode>><<time_manip_minus>><<endif>>
+	@@.Green;<<print $time_h>>:<<print $time_m>>@@
+	<<if $debug_mode>> <<time_manip_plus>><<endif>>
+	@@.Green;Bank: <<print $cur_money>> $@@ 
+
+	Energy <<print $cur_energy>>/<<print $max_energy>>
+	<div id="energybarbkg" class="hzbarbkg"><div id="energybar" class="hzbar"></div></div><<run Health($cur_energy, $max_energy, "energybar", true)>>
+	Hunger <<print (($cur_hunger/$max_hunger) * 100).toFixed(0)>>%
+	<div id="hungerbarbkg" class="hzbarbkg"><div id="hungerbar" class="hzbar"></div></div><<run Health($cur_hunger, $max_hunger, "hungerbar", true)>>
+	Mood <<print (($cur_mood/$max_mood) * 100).toFixed(0)>>%
+	<div id="moodbarbkg" class="hzbarbkg"><div id="moodbar" class="hzbar"></div></div><<run Health($cur_mood, $max_mood, "moodbar", true)>>
+	Arousal <<print (($cur_lust/$max_lust) * 100).toFixed(0)>>%
+	<div id="lustbarbkg" class="hzbarbkg"><div id="lustbar" class="hzbar"></div></div><<run Health($cur_lust, $max_lust, "lustbar", true)>>
+
+:: StoryMenu
+	<<link "\u2713 Quests" quest_log>><</link>>
+
+	<<if $debug_mode is true>>\
+	<<link "\u2A77 Debug" debug>><</link>>
+	<<endif>>\
+
+:: StoryInit
+	<<set $debug_mode to false>>
+	<<set $gradual_current_trigger to -1>>
+
+	<<set $current_quests to []>>
+
+	<<set $tv_on to false>>
+	<<set $tv_content to "toons">>
+	<<set $tv_porn_channel_find_chance to 33>>
+	<<set $tv_porn_enabled to false>>
+	<<set $tv_porn_cuckquean_event_done to false>>
+
+	<<set $player_name to "Saren">>
+
+	<<set $time_passage to false>>
+	<<set $time_increment_min to 0>>
+	<<set $time_increment_hour to 0>>
+     
+	<<set $time_h to "10">>
+	<<set $time_m to "00">>
+
+	<<set $is_night to false>>
+
+	<<set $cur_day to 1>>
+	<<set $week_day to "Tuesday">>
+
+	<<set $cur_money to 100 >>
+	<<set $cur_supplies to 5 >>
+
+	<<set $cur_energy to 5>>
+	<<set $max_energy to 5>>
+
+	<<set $cur_hunger to 15>>
+	<<set $max_hunger to 100>>
+	<<set $hunger_decay to 0.15>>
+
+	<<set $cur_mood to 80>>
+	<<set $max_mood to 100>>
+	<<set $mood_decay to -0.15>>
+
+	<<set $cur_lust to 0>>
+	<<set $max_lust to 100>>
+	<<set $lust_decay to -0.15>>
+
+	<<set $groceries_price to 20>>
+	
+	<<set $computer_skill = 0>>\
+
+	<<set $job_search_complete to false>>
+	<<set $job_search to 0>>
+	<<set $job_search_day to null>>
+
+	<<set $job_enabled to false>>
+	
+	<<set $job_survey to false>>
+
+	<<set $job_survey_porn_event_trigger to 3>>
+	<<set $job_survey_porn_event_chance to 40>>
+
+	<<set $job_survey_porn to false>>
+
+	<<set $amazing_courses_plusplus to false>>
+	<<set $course_computer_0_price to 50>>
+
+	<<set $porn_site_enabled to false>>
+	<<set $kinklife_enabled to false>>
+	
+	<<set $drone_intro to 0>>
+
+	<<set $donovan_message to false>>
+
+	<<set $phoebe_message to false>>
+	<<set $phoebe_talk to 0>>
+	<<set $phoebe_online to false>>
+	<<set $phoebe_sleep to false>>
+	<<set $phoebe_clint_talk to 0>>
+	<<set $phoebe_survey_porn_talk to false>>
+	<<set $phoebe_camgirl_help_start to false>>
+	<<set $phoebe_camgirl_help_advert_to to 0>>
+	<<set $phoebe_camgirl_help_advert_ban to 0>>
+	<<set $phoebe_camgirl_help_asshole_to to 0>> 
+	<<set $phoebe_camgirl_help_asshole_ban to 0>>
+	<<set $phoebe_camgirl_help_end to false>>
+
+	<<set $clint_message to false>>
+	<<set $clint_talk to 0>>
+	<<set $clint_online to false>>
+	<<set $clint_sleep to false>>
+
+

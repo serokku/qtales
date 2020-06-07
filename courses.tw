@@ -1,0 +1,41 @@
+:: course_computer_0_buy [computer]
+	<<set $course_computer_0_bought to true>>\
+	<<sub "money" $course_computer_0_price>>\
+	<<goto computer_courses>>\
+
+:: course_computer_0 [computer]
+	@@.Narrator;You click on the online classes eager to learn about the magic of computers, after watching 10 minutes of the teacher droning on about shit you already knew you skip straight into the exercises.
+
+	The teacher asks to install a software from popular software hosting website as an exercise, you do everything fine but get confused on to what DOWNLOAD button you should click, you choose one at random and click it.
+
+	Suddenly you are met with an ABSURD amount of porn pop-ups.
+
+	<<image "images/computer/course_computer_0/ads.webm">>
+
+	You frantically click around to close the pop-ups, but they appear faster than you can close them.
+
+	A message show's up on the bottom right of your screen.@@
+
+	@@.Clint;CLINT'S AMAZING ANTI-VIRUS SOFTWARE
+	VIRUSES DETECTECTED, CLEANING...@@
+
+	@@.Player;<<player_name>>@@
+	@@.PlayerThink;Clint must have installed an anti-virus software along with the job thing, nice.@@
+
+	@@.Clint;CLINT'S AMAZING ANTI-VIRUS SOFTWARE
+	DONE, 2346 VIRUSES REMOVED@@
+
+	@@.Narrator;And just like that, as suddenly as they appeared the pop-ups disappear.
+
+	You are happy about that, but while the anti-virus was working you caught yourself looking a little bit too much at some of them.
+
+	Some of them did look quite interesting...@@
+
+	<<linkreplace "Re-watch the classes and actually pay attention this time.">>\
+	@@.Narrator;This time you pay attention, and you dont fall for the same tricks.@@
+
+	@@.SkillLearn;Computer Skill +1!@@\
+	<<set $computer_skill += 1>>
+
+	[[Neat, go back to the desktop|computer]]
+	<</linkreplace>>

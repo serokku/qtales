@@ -1,0 +1,31 @@
+:: donovan_sent_message
+	<<if $don_fire && !$job_search>>\
+		<<goto don_fire>>\
+	<<endif>>\
+
+:: don_fire
+	<<set $don_fire to 0>>\
+	<div align="right">@@.Donovan;DONOVAN:@@
+	@@.DonovanSpeak;Hello $player_name, I am sending this message to you from the hospital, I hope you are doing wells in quarantine.
+
+	This is very difficult to say, and I apologize profusely, but I have taken the decision to help my fellow men and sign up for a vaccine trial for FLACCID-69, unfortunately for many reasons this means that I am in the future going to head to Florida, which means that I can't keep employing you or Phoebe.
+
+	Have a good evening.
+
+	Donovan H. Dickings\
+	@@</div>
+
+	@@.Narrator;You cant reply to this conversation, since the recipient is currently offline.@@
+
+	@@.Player;<<player_name>>:@@
+	@@.PlayerThink;What is that cunt doing signing up for a vaccine trial, Phoebe told me his dick has been limp for years!
+
+	Well, okay, let me think, I need a job, and probably some that I can do on the computer, since this whole Quarantine thing, maybe Clint can help me find something, he is like a savant of the interwebz, do people still say interwebz.
+
+	He's usually online later on the day.@@
+	<<add_time 0 5>>\
+	<<set $job_search to 1>>\
+
+	<<add_quest 1>>
+
+	[[Go back|computer_talkings]]

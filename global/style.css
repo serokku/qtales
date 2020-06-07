@@ -1,0 +1,515 @@
+.QuestNew
+{
+	color: #00d0ff;
+	font-style: italic;
+	font-weight: bold;
+ 	text-shadow:
+		#00d0ff 0px 0px 10px;
+}
+
+.QuestUpdate
+{
+	color: #00d0ff;
+	font-style: italic;
+	font-weight: bold;
+	text-shadow:
+		#00d0ff 0px 0px 10px;
+}
+
+.Quest
+{
+	color: #00d0ff;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.QuestObjectiveCompleted
+{
+	color: #758e94;
+	margin-left: 25px;
+}
+
+.QuestObjectiveCurrent
+{
+	color: #c3e3eb;
+	margin-left: 25px;
+}
+
+.EventAvailable
+{
+	color: #fcf688;
+	font-weight: bold;
+	text-shadow: #fcf00a 0px 0px 10px;
+}
+
+.PlayerNameSidebar
+{
+	font-size: 22px;
+	font-weight: bold;
+}
+
+/* Horizontal Health Bar - Start */
+.hzbarbkg {  /* default class for all horizontal bar backgrounds */
+	position: relative;
+	height: 15px;
+	width: 100%;
+	background-color: #111;
+	background-image: linear-gradient(to right, rgba(68, 68, 68, 0.5), rgba(34, 34, 34, 0.5) 5px), linear-gradient(to bottom, rgba(68, 68, 68, 0.5), rgba(0, 0, 0, 0) 5px), linear-gradient(to left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 5px), linear-gradient(to top, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 5px);
+	border-radius: 10px;
+	z-index: 10;
+	visibility: visible;
+}
+.hzbar {  /* default class for all horizontal bars */
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	height: 15px;
+	background-color: transparent;
+	background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 5px), linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 5px), linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 5px), linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 5px);
+	border-radius: 10px;
+	z-index: 20;
+	transition: width ease 1s, background-color ease 1s;
+}
+#energybar {  /* colors for specific fixed-color horizontal bars */
+	background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 5px), linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 5px), linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 5px), linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 5px), radial-gradient( circle at bottom right, #2c2, #2c2 60% );
+}
+#hungerbar {  /* colors for specific fixed-color horizontal bars */
+	background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 5px), linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 5px), linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 5px), linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 5px), radial-gradient( circle at bottom right, #fc3, #fc3 60% );
+}
+#moodbar {  /* colors for specific fixed-color horizontal bars */
+	background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 5px), linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 5px), linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 5px), linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 5px), radial-gradient( circle at bottom right, #f33, #f33 60% );
+}
+#lustbar {  /* colors for specific fixed-color horizontal bars */
+	background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 5px), linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 5px), linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 5px), linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 5px), radial-gradient( circle at bottom right, #f3f, #f3f 60% );
+}
+/* Horizontal Health Bar - End */
+
+/* Animations */
+.gradual_transition
+{
+	display: inline-block;
+	animation: FadeInAnim 0.5s ease-in-out forwards;
+}
+
+@keyframes FadeInAnim
+{
+	0%
+  	{
+	  	opacity: 0;
+  	}
+  	to
+  	{
+	 	opacity: 1;
+  	}  
+}
+
+/*Colors*/
+
+:root
+{
+	--link-color:			#ff7700;
+	--link-color-disabled:	#542e00;
+	--link-hover-color: 	#ffc6c6;
+	
+	--text-shadow-color:	#ff7700;
+	--box-shadow-color: 	#ff7700;
+	
+	--text-shadow-warning:  #ff0000;
+	--box-shadow-warning:   #ff0000;
+}
+
+/* Passage Styling */
+/* Passage Background */
+body
+{
+	background-image:
+	  	linear-gradient(rgba(0,0,0,1.0), rgba(0,0,0,0.9)), 
+		url("images/default.jpg");
+/*  background-position: center center;
+	background-repeat: no-repeat;*/
+	background-attachment: 	fixed;
+	background-size: 		cover;
+/*  	max-width: 200%;
+  	height: auto;
+  	overflow: scroll;*/
+}
+
+body.livingroom
+{
+ 	background-image:
+	  	linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.85)), 
+		url("images/locations/livingroom.jpg");
+}
+
+body.kitchen
+{
+ 	background-image:
+	  	linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.85)), 
+		url("images/locations/kitchen.jpg");
+}
+
+body.bedroom
+{
+ 	background-image:
+	  	linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.85)), 
+		url("images/locations/bedroom.jpg");
+}
+
+body.computer
+{
+ 	background-image:
+	  	linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.85)), 
+		url("images/locations/computer.jpg");
+}
+
+body.balcony
+{
+ 	background-image:
+	  	linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.85)), 
+		url("images/locations/balcony.jpg");
+}
+
+body.bathroom
+{
+ 	background-image:
+	  	linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.85)), 
+		url("images/locations/bathroom.jpg");
+}
+
+.location_image
+{
+	max-width: 100px;
+}
+
+/* Links */
+a
+{
+	color: 		var(--link-color);
+}
+
+a:hover
+{
+	color: 		var( --link-hover-color );
+	text-shadow:
+		var( --text-shadow-color ) 0px 0px 10px,
+		var( --text-shadow-color ) 0px 0px 1px;
+}
+
+/* Sidebar */
+#ui-bar
+{
+	background-image: 
+	  	linear-gradient( rgba(0,0,0,1.0), rgba(0,0,0,0.8)  ), 
+		url("images/default.jpg");
+	background-attachment: 	fixed;
+	background-size: 		cover;
+}
+
+#menu li:hover
+{
+	opacity: 0.999;  /*Learned this trick from reading Anax's code, actually, learned a lot of tricks from Anax's code.*/
+}
+
+#story-title 
+{
+	display: none;
+}
+
+#menu li a:hover,
+#ui-bar-toggle:hover,  
+#ui-bar-history [id|=history]:enabled:hover  
+{
+	background-color: 	transparent;
+	border-color: 		transparent;
+	box-shadow:
+		var( --box-shadow-color ) 0px 0px 10px,
+		var( --box-shadow-color ) 0px 0px 1px;
+	text-shadow:
+		var( --text-shadow-color ) 0px 0px 10px,
+		var( --text-shadow-color ) 0px 0px 1px;
+	color: 				var( --link-hover-color );
+}
+
+
+/* Dialog Style */
+
+#ui-dialog-title
+{
+	padding-right: 1em;
+	background-attachment: fixed;
+	background-size: cover;
+	border-top: 1px solid #444;
+	border-left: 1px solid #444;
+	border-right: 1px solid #444;
+}
+
+/* Dialog background */
+#ui-dialog-body
+{
+	background-image: 		
+	  linear-gradient( rgba(0,0,0,0.8), rgba(0,0,0,0.8) ); 
+	background-attachment: 	fixed;
+	background-size: 		cover;
+}
+
+#ui-dialog-body button:enabled
+{
+	background-color: 	transparent;
+	border: 			1px solid #444;
+  	color: 				var( --link-color );
+}
+
+#ui-dialog-body button:disabled
+{
+	background-color: transparent;
+	border: 1px solid #222;
+	color: var(--link-color-disabled)
+}
+
+#ui-dialog-body button:enabled:hover
+{
+	background-color: 	transparent;
+	box-shadow:
+		var( --box-shadow-color ) 0px 0px 10px,
+		var( --box-shadow-color ) 0px 0px 1px;
+	text-shadow:
+		var( --text-shadow-color ) 0px 0px 10px,
+		var( --text-shadow-color ) 0px 0px 1px;
+	color: var(--link-color-hover)
+}
+
+#ui-dialog-close:hover,
+#ui-dialog-body [id|=saves-clear]:enabled:hover,
+#ui-dialog-body [id|=saves-delete]:enabled:hover
+{
+	background-color: transparent;
+	border-color: transparent;
+	text-shadow:
+		var( --text-shadow-warning ) 0px 0px 15px,
+		var( --text-shadow-warning ) 0px 0px 2px;
+	color: var(--text-shadow-warning);
+}
+
+#ui-dialog-body [id|=saves-clear]:enabled:hover,
+#ui-dialog-body [id|=saves-delete]:enabled:hover
+{
+	box-shadow:
+		var( --box-shadow-warning ) 0px 0px 10px,
+		var( --box-shadow-warning ) 0px 0px 1px;
+}
+
+.Narrator
+{
+  	color: #a0a0a0;
+}
+
+.Action
+{
+  	color: #505050;
+  	font-style: italic;
+	font-weight: bold;
+}
+
+.Player
+{
+	color: #0097b5;
+	font-weight: bold;
+}
+
+.PlayerSpeak
+{
+	color: #a5bdc2;
+}
+
+.PlayerThink
+{
+	color: #a5bdc2;
+  	font-style: italic;
+ 	text-shadow:
+		#a5bdc2 0px 0px 10px;
+}
+
+.SkillLearn
+{
+	color: #00a000;
+	font-weight: bold;
+}
+
+.Orange
+{
+	color: #a0a000;
+}
+
+.Red
+{
+	color: #a00000;
+}
+
+.Green
+{
+	color: #00a000;
+}
+
+/* Character  Colors */
+
+.NPC0
+{
+	color: #f51707;
+	font-weight: bold;
+}
+
+.NPC0Speak
+{
+	color: #f2b3ae;
+}
+
+.NPC1
+{
+	color: #14fc69;
+	font-weight: bold;
+}
+
+.NPC1Speak
+{
+	color: #befad4;
+}
+
+.AnnaBloume
+{
+  	color: #c21791;
+	font-weight: bold;
+}
+
+.AnnaBloumeSpeak
+{
+  	color: #bd8caf;
+}
+
+.KevinHardikk
+{
+  	color: #ba183b;
+	font-weight: bold;
+}
+.KevinHardikkSpeak
+{
+  	color: #bf939d;
+}
+
+.ClaireSuccmeoff
+{
+  	color: #1cc74f;
+	font-weight: bold;
+}
+.ClaireSuccmeoffSpeak
+{
+  	color: #99c4a6;
+}
+
+.DrD
+{
+	color: #b38710;
+	font-weight: bold;
+}
+
+.DrDSpeak
+{
+	color: #b3a378;
+}
+
+.Phoebe
+{
+	color: #56ff30;
+	font-weight: bold;
+}
+.PhoebeSpeak
+{
+	color: #c9ffbd;
+}
+
+.Clint
+{
+	color: #eb1c1c;
+	font-weight: bold;
+}
+.ClintSpeak
+{
+	color: #e88b8b;
+}
+
+.Donovan
+{
+	color: #7a2704;
+	font-weight: bold;
+}
+.DonovanSpeak
+{
+	color: #826c63;
+}
+
+	
+.ChatSystem
+{
+	color: #f00050;
+	font-weight: bold;
+}
+
+.Chat0
+{
+	color: #d91466;
+	font-weight: bold;
+}
+.Chat0Speak
+{
+	color: #d68baa;
+}
+
+.Chat1
+{
+	color: #c4c116;
+	font-weight: bold;
+}
+.Chat1Speak
+{
+	color: #c2c1a3;
+}
+
+.Chat2
+{
+	color: #bf2315;
+	font-weight: bold;
+}
+.Chat2Speak
+{
+	color: #c2a4a1;
+}
+
+.Chat3
+{
+	color: #19c26b;
+	font-weight: bold;
+}
+.Chat3Speak
+{
+	color: #97bfab;
+}
+
+.Chat4
+{
+	color: #21de00;
+	font-weight: bold;
+}
+.Chat4Speak
+{
+	color: #afe3a6;
+}
+
+.Chat5
+{
+	color: #07e358;
+	font-weight: bold;
+}
+.Chat5Speak
+{
+	color: #b1e0c3;
+}
+
